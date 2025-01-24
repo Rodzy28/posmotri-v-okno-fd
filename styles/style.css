@@ -69,6 +69,7 @@ ol {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -238,6 +239,7 @@ ol {
   max-height: 298px;
   overflow-y: auto;
   padding: 3px;
+  position: relative;
 }
 
 .content__list {
