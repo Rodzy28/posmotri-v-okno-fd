@@ -53,6 +53,7 @@ ol {
   background-color: #d9d9d9;
 }
 
+/* Блок content */
 .content {
   display: grid;
   gap: 30px;
@@ -113,6 +114,19 @@ ol {
   align-items: center;
 }
 
+.search-form__label:hover {
+  cursor: pointer;
+}
+
+.search-form__label:hover > .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
 .search-form__textfield {
   font-family: "Fira Sans Condensed", sans-serif;
   font-style: normal;
@@ -134,11 +148,6 @@ ol {
 
 .search-form__textfield:focus {
   outline: none;
-}
-
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 .search-form__pseudo-checkbox {
@@ -163,23 +172,19 @@ ol {
   display: block;
 }
 
-.search-form__label:hover > .search-form__label-text {
-  text-decoration: underline;
-}
-
 /* Кнопки и их состояние */
-
 .button {
-font-family: 'Fira Sans Condensed', sans-serif;
-font-weight: 700;
-font-size: 18px;
-line-height: 22px;
-text-align: center;
-color: currentColor;
-background-color: transparent;
-border: 1px solid currentColor;
-height: 34px;
-padding: 0;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: currentColor;
+  background-color: transparent;
+  border: 1px solid currentColor;
+  height: 34px;
+  padding: 0;
+  cursor: pointer;
 }
 
 .search-form__submit-button {
@@ -210,7 +215,6 @@ padding: 0;
 }
 
 /* Список карточек(блок content) */
-
 .content__details {
   grid-area: 1 / 2 / 2 / 3;
 }
@@ -233,7 +237,7 @@ padding: 0;
 .content__list-container {
   max-height: 298px;
   overflow-y: auto;
-  padding: 0 3px 0 2px;
+  padding: 3px;
 }
 
 .content__list {
@@ -245,6 +249,27 @@ padding: 0;
 .content__card-link {
   display: block;
   text-decoration: none;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline #fff;
+  text-decoration-skip-ink: none;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__video-card {
