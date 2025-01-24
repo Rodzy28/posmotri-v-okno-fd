@@ -104,7 +104,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 39px;
+  gap: 15px;
 }
 
 .search-form__label {
@@ -166,6 +166,50 @@ ol {
 .search-form__label:hover > .search-form__label-text {
   text-decoration: underline;
 }
+
+/* Кнопки и их состояние */
+
+.button {
+font-family: 'Fira Sans Condensed', sans-serif;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+color: currentColor;
+background-color: transparent;
+border: 1px solid currentColor;
+height: 34px;
+padding: 0;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Список карточек(блок content) */
 
 .content__details {
   grid-area: 1 / 2 / 2 / 3;
