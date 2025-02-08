@@ -162,16 +162,11 @@ ol {
   border: 1px solid currentColor;
 }
 
-.search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
-  display: none;
   width: 15px;
   height: 15px;
   background-color: currentColor;
-}
-
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-  display: block;
 }
 
 /* Кнопки и их состояние */
